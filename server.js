@@ -1,8 +1,10 @@
 import express from "express";
 import dotenv from "dotenv";
 import morgan from "morgan";
-import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
 import { connectDB } from "./config/db.js";
 import authRoute from "./routes/authRoute.js";
 import categoryRoutes from "./routes/categoryRoutes.js";
@@ -36,8 +38,7 @@ app.use("*", function (req, res) {
   res.sendFile(join(__dirname, "./client/build/index.html"));
 });
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-

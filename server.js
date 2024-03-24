@@ -19,9 +19,6 @@ const app = express();
 // Configure environment variables
 dotenv.config();
 
-// Database configuration
-connectDB();
-
 // Middleware
 app.use(cors());
 app.use(express.json());
@@ -38,7 +35,10 @@ app.use("*", function (req, res) {
   res.sendFile(join(__dirname, "./client/build/index.html"));
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+const PORT = process.env.PORT || 8080;
+connectDB().then(() => {
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+  });
 });

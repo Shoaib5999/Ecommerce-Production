@@ -3,7 +3,6 @@ import dotenv from "dotenv";
 import morgan from "morgan";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
-import { dirname, join } from "path";
 import { connectDB } from "./config/db.js";
 import authRoute from "./routes/authRoute.js";
 import categoryRoutes from "./routes/categoryRoutes.js";

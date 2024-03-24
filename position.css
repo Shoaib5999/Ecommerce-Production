@@ -1,0 +1,13 @@
+.container{
+  position: relative;
+}
+.box-1{
+  position:absolute;
+
+  /* bottom:100px; */
+  /* left:500px */
+  top:300px;
+}
+.empty{
+  height: 10000px;
+}
